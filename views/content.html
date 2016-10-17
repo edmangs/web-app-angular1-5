@@ -1,0 +1,73 @@
+<div class="row">
+    <h3 class="center-align">Con que herramientas fue creada Mascota PET</h3>
+    <div class="row">
+
+        <div class="col s12 m6 l6">
+            <div class="card">
+                <div class="card-content">
+                    <h4>Aclaraciones de la aplicación</h4>
+                    <p>
+                        <b>Mascota PET</b>, es un nombre tomado aleatoriamente, cualquier parecido con 
+                        otro producto, marca u objeto es pura coincidencia, además que <b>Mascota PET</b>
+                        no a sida creada con ningún animo de lucro, solo como desarrollo educativo 
+                        de su creador.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6 l6">
+            <div class="card">
+                <div class="card-content">
+                    <h4>Herramientas de desarrollo</h4>
+                    <p>
+                        <b>Mascota PET</b>, fue desarrollada con los frameworks de 
+                        <b><a href="https://angularjs.org/" target="_blank">AngularJS v1.5.5</a></b> 
+                        y <b><a href="http://materializecss.com/" target="_blank">Materialize css v0.97.7</a></b>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l12">
+            
+            <div class="card">
+                <div class="card-content">
+                    <h4>Referencia a elementos externos</h4>
+                    <p>
+                        Agradezco a las personas, páginas o productos que fueron usados en el desarrollo de 
+                        <b>Mascota PET</b>.
+                    </p>
+                </div>
+            </div>
+            
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo de archivo</th>
+                        <th>URL</th>
+                        <th>Página</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat="file in files track by file.id">
+                        <td>{{ file.name }}</td>
+                        <td>{{ file.type }}</td>
+                        <td>
+                            <a href="{{ file.url }}" target="_blank">
+                                {{ file.url }}
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ file.app }}" target="_blank">
+                                {{ file.app }}
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

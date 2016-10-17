@@ -1,0 +1,97 @@
+<div>
+    <div class="col s12">
+        <div class="z-depth-2">
+            <h4 class="center-align">Creando a {{ user.name}}</h4>
+            <div class="row">
+                <div class="row card-panel green center-align" ng-show="saveMessage">
+                    <span class="white-text">
+                        El nuevo dueño a sido creado
+                    </span>
+                </div>
+                
+                <div class="row card-panel orange center-align" ng-show="saveMessageError">
+                    <span class="white-text">
+                        Datos insuficientes para crear al nuevo dueño
+                    </span>
+                </div>
+
+                <form class="col s12" ng-submit="save(user)">
+
+                    <div class="row col s12 s12 l6 center-align">
+                        <img ng-src="{{ user.picture}}" class="responsive-img">
+                        
+                        <div class="row">
+                            <div class="col s12">
+                                <label for="photo">Foto *</label>
+                                <input id="photo" type="text" class="validate" ng-model="user.picture" 
+                                       placeholder="Ingrese la url de la imagen"
+                                       required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col s12 m12 l6">
+                        <div class="row">
+                            <div class="col s12 m6 l6">
+                                <label for="first_name" >Nombre *</label>
+                                <input id="first_name" type="text" class="validate" ng-model="user.name" required>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <label for="last_name">Apellidos *</label>
+                                <input id="last_name" type="text" class="validate" ng-model="user.lastName" required>
+                            </div>
+                            <div class="col s12">
+                                <label for="last_name">Perfil *</label>
+                                <textarea id="textarea1" class="materialize-textarea" ng-model="user.profile" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <label for="password">Contraseña</label>
+                                <input id="password" type="password" class="validate" ng-model="user.password">
+                            </div>
+                        </div>
+                        
+                        <fieldset>
+                            <legend>Datos de contacto</legend>
+                            
+                            <div class="row">
+                                <div class="col s12">
+                                    <label for="email">Email *</label>
+                                    <input id="email" type="email" class="validate" ng-model="user.email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label for="phone">Telefono</label>
+                                    <input id="phone" type="text" class="validate" ng-model="user.phone">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label for="phone">Dirección</label>
+                                    <input id="phone" type="text" class="validate" ng-model="user.phone">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label for="facebook">Facebook</label>
+                                    <input id="pfacebook" type="text" class="validate" ng-model="user.facebook">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label for="twitter">Twitter</label>
+                                    <input id="twitter" type="text" class="validate" ng-model="user.twitter">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="row right-align">
+                        <button class="btn">Guardar</button>	
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

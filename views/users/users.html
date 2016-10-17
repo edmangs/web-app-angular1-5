@@ -1,0 +1,33 @@
+<div class="row col s12">
+    <div class="row"></div>
+    <div class="row right-align">
+        <a class="btn" href="#/new-user">
+            Agregar nuevo dueño
+        </a>
+    </div>
+    <div class="row"> 
+        <table class="centered">
+            <thead>
+                <tr>
+                    <td>Foto</td>
+                    <td>Nombre</td>
+                    <td class="hide-on-small-only">Apellido</td>
+                    <td>Acciones</td>
+                </tr>	
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="user in users track by user.id">
+                    <td width="40%" class="center-align">
+                        <img ng-src="{{ user.picture}}" class="responsive-img">
+                    </td>
+                    <td>{{ user.name}}</td>
+                    <td class="hide-on-small-only">{{ user.lastName}}</td>
+                    <td>
+                        <a class="btn" ng-href="#/user/edit/{{user.id}}">Editar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

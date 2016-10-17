@@ -1,0 +1,239 @@
+/* ------------------------ CSS General --------------------------------------*/
+html {
+    background-color: white;
+}
+body {
+    color: #727175;
+}
+.background-color1{
+    background-color: blue!important;
+}
+.background-color2{
+    background-color: red !important;
+}
+.background-color3{
+    background-color: green !important;
+}
+.background-color4{
+    background-color: grey !important;
+}
+.color1{
+    color: blue !important;
+}
+.color2{
+    color: red !important;
+}
+.color3{
+    color: green !important;
+}
+.color4{
+    color: grey !important;
+}
+.slider .indicators .indicator-item {
+    background-color: #EBAD27;
+}
+.formulario-login {
+    margin: 5%;
+}
+.side-nav li.active {
+    background-color: ;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus, .input-field input[type=password]:focus {
+    border-bottom: 1px solid #ffa726;
+    box-shadow: 0 1px 0 0 #ffa726;
+}
+.modal {
+    overflow-y: scroll;
+    max-height: 300px !important;
+}
+.input-field input[type=text]:focus, .input-field input[type=password]:focus {
+    border-bottom: 1px solid #ffa726;
+    box-shadow: 0 1px 0 0 #ffa726;
+}
+.input-field .prefix.active {
+    color: #ffa726;
+}
+.logo-modal{
+    max-width: 150px !important;
+    height: auto;
+}
+.logo-prehome {
+    padding-top: 5%;
+}
+.row-logo-prehome{
+    margin-bottom: 0 !important;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.content-flex-center {
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-form{
+    z-index: 3;
+    background: #fff;
+    width: 40%;
+    border-radius: 5px;
+}
+.height100{
+    height: 100vh;
+}
+.content-access-denied{
+    width: 50%
+}
+/* ------------------------ End CSS General ----------------------------------*/
+/* -------------------------- CSS Dashboard ----------------------------------*/
+header, main, footer {
+    /*padding-left: 300px;*/
+}
+.img-program{
+    border: 0;
+    height: 60px;
+}
+.dropdown-img {
+    display: inline-flex;
+    padding-bottom: 1px; }
+.dropdown-img > img{
+    height: 50px;
+    margin-top: 7px;
+}
+    
+.navbar-img-app {
+        height: 56px;
+    }
+.navbar-img-app > img{
+    margin-top: 2px;
+}
+.content-carrusel {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #ccc;
+    width: 100%;
+    opacity: 0.9;
+}
+.content-carrusel > p {
+    padding-left: 5px;
+}
+ul#profileopt {
+    width: 125px;
+}
+footer .row {
+    margin-bottom: 0px;
+}
+main{
+    min-height: 83vh;
+}
+footer.page-footer {
+    padding-bottom: 20px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 2;
+}
+.banner-user .carousel{
+    min-height: 400px;
+}
+.carousel .carousel-item img {
+    height: 400px;
+}
+.banner-user .carousel {
+    overflow: visible;
+}
+.banner-user .slider .slides li .caption {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    opacity: 0.5 !important;
+}
+.banner-user .slider .indicators {
+    bottom: 45px;
+    z-index: 2;
+}
+.banner-user a {
+    width: 100%;
+    padding: 0px;
+    display: inline;
+}
+.card span.card-title {
+    opacity: .7!important;
+    width: 100%;
+}
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width : 600px) {
+    .dropdown-img > img{
+        height: 50px;
+        margin-top: 3px;
+    }
+}
+/* -------------------------- End CSS Dashboard ------------------------------*/
+/* ------------------------ CSS Media query ----------------------------------*/
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+@mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex:  $values;
+    -webkit-flex:  $values;
+    -ms-flex:  $values;
+    flex:  $values;
+}
+@mixin order($val) {
+    -webkit-box-ordinal-group: $val;  
+    -moz-box-ordinal-group: $val;     
+    -ms-flex-order: $val;     
+    -webkit-order: $val;  
+    order: $val;
+}
+.wrapper {
+    @include flexbox();
+}
+.item {
+    @include flex(1 200px);
+    @include order(2);
+}
+@media (min-width:1px) and (max-width:1000px) {
+    .content-form {
+        width: 80%;
+    }
+    .content-access-denied{
+        width: 80%
+    }
+}
+@media (min-width:0px) and (max-width:600px) {
+    footer div.terms{
+        margin-top: 20px;
+    }
+}
+/* ------------------------ End CSS Media query ------------------------------*/
